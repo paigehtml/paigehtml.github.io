@@ -120,10 +120,11 @@ on desktop.
 }
 
 p,h2,ul{
-    line-height:1.2;
+    line-height:0.75;
     -webkit-transform:translateZ(100px);
     transform:translateZ(100px);
 }
+.pWithLinks {line-height: 1.2;}
 
 /* The idea of these is to give you options for the 3d effect */
 .thirdDepth{

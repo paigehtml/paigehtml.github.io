@@ -2,6 +2,7 @@ addEventListener("resize", (event) => {});
 
 
 var mainBlock=document.getElementById("spinnyDiv");
+var gifBlock=document.getElementById("contactGif");
 const src = document.getElementById("source");
 let clientX;
 let clientY;
@@ -37,6 +38,7 @@ onresize = () => {
 
 document.documentElement.onmousemove=function(e){
     mainBlock.style.webkitTransform= mainBlock.style.transform=getRotateStr(e.pageX);
+    gifBlock.style.webkitTransform= mainBlock.style.transform=getRotateStr(e.pageX);
 };
 
 window.addEventListener("touchmove", e => {

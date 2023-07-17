@@ -45,6 +45,7 @@ window.addEventListener("touchmove", e => {
     e.preventDefault();
     e.stopImmediatePropagation();
     mainBlock.style.webkitTransform=getRotateStr(e.changedTouches[0].clientX);
+    gifBlock.style.webkitTransform=getRotateStr(e.changedTouches[0].clientX);
   }, { passive: false });
 
 document.documentElement.ondragstart=function(e){
@@ -56,12 +57,12 @@ document.documentElement.ondrag=function(e){
 };
 
 function setDepths() {
-    let i = 0;
+    let i = 5;
     $(".contentLink").each(function(index, element) {
         i += 1;
-        $(this).css("transform", "translateZ(" + 100*i + "px)"); 
-        $(this).css("-webkit-transform", "translateZ(" + 100*i + "px)"); 
-    });  
+        $(this).css("transform", "translateZ(" + 30*i + "px)"); 
+        $(this).css("-webkit-transform", "translateZ(" + 30*i + "px)"); 
+    });
 }
 
 

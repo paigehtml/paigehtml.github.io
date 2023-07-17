@@ -118,7 +118,7 @@ on desktop.
 }
 
 #spinnyDiv:hover {
-    border-color: blue;
+    border-color: var(--visited_link_color);
 }
 
 p,h2,ul{

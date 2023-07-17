@@ -1,0 +1,132 @@
+:root {
+    --regular_text:rgb(59, 59, 59);
+    --border_color: rgb(59, 59, 59);
+    --background_color: rgb(77, 65, 255);
+    --background_color: rgb(255, 255, 255);
+    --header_color: rgb(0, 0, 0);
+    --link_color: rgb(0, 0, 255);
+    --link_background: rgb(0, 0, 0);
+    --visited_link_color: rgb(0, 4, 65);
+    --highlight_background: rgb(181, 245, 53);
+    --hover-link-background: rgb(229, 255, 57);
+}
+
+html {
+    background-color: var(--background_color);
+    color: var(--regular_text);
+
+}
+
+::selection { /* Colors for highlighting stuff */
+    background: var(--highlight_background);
+}
+
+::-moz-selection { /* Also colors for highlighting stuff */
+    background: var(--highlight_background);
+}
+
+h1{
+    position:relative;
+}
+
+body{
+    padding:20px;
+}
+
+.fungif {
+    width: 30px;
+    height: 30px;
+}
+
+body,h1,h2 {
+    font-family:Courier,monospace;
+    font-size:14px;
+    font-weight:400;
+}
+
+a {
+    color: var(--link_color);
+    padding: 4px;
+}
+
+a:hover {
+    background-color: var(--hover-link-background);
+}
+
+a:visited { /* color of a link that's been clicked on*/
+    color: var(--visited_link_color);
+}
+
+li:hover {
+    background-color: var(--hover-link-background);
+}
+
+h1{
+    left:0
+}
+
+strong{
+    font-weight:700
+}
+
+ul{
+    list-style:none;padding:0
+}
+
+/* 
+The settings for spinny div when you're
+on desktop.
+ */
+#spinnyDiv {
+    border:1px solid var(--border_color);
+    padding:0 15px;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+
+#spinnyDiv:hover {
+    border-color: blue;
+}
+
+p,h2,ul{
+    line-height:1.2;
+    -webkit-transform:translateZ(100px);
+    transform:translateZ(100px);
+}
+
+/* The idea of these is to give you options for the 3d effect */
+.thirdDepth{
+    -webkit-transform:translateZ(200px);
+    transform:translateZ(200px);
+
+}
+
+/* The idea of these is to give you options for the 3d effect */
+.fourthDepth{
+    -webkit-transform:translateZ(-50px);
+    transform:translateZ(-50px);
+}
+
+@media only screen and (min-width:770px) {
+
+body{
+    padding-bottom:10em;
+}
+
+body,h1,h2 {
+    font-size: 17px;
+}
+
+/* 
+The settings for spinny div when you're
+on a mobile screen
+ */
+#spinnyDiv {
+    width:550px;
+    position:absolute;
+    top:5em;
+    left:20%;
+}
+
+}
+

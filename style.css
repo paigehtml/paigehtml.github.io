@@ -4,9 +4,9 @@
     --background_color: rgb(77, 65, 255);
     --background_color: rgb(255, 255, 255);
     --header_color: rgb(0, 0, 0);
-    --link_color: rgb(0, 0, 255);
+    --link_color: rgb(61, 41, 56);
     --link_background: rgb(0, 0, 0);
-    --visited_link_color: rgb(0, 4, 65);
+    --visited_link_color: rgb(138, 76, 122);
     --highlight_background: rgb(181, 245, 53);
     --hover-link-background: rgb(229, 255, 57);
     --other_link_color: rgb(181, 245, 53);
@@ -93,6 +93,7 @@ ul{
 
 .smallerHeader {
     font-weight: bold;
+    /* color: orange; */
 }
 
 .paragraphLink {

@@ -8,7 +8,8 @@
     --link_background: rgb(0, 0, 0);
     --visited_link_color: rgb(138, 76, 122);
     --highlight_background: rgb(181, 245, 53);
-    --hover-link-background: rgb(229, 255, 57);
+    --hover-link-background: rgb(181, 245, 53);
+    /* --hover-link-background: rgb(229, 255, 57); */
     --other_link_color: rgb(181, 245, 53);
 }
 

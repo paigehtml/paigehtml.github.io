@@ -9,6 +9,7 @@
     --visited_link_color: rgb(0, 4, 65);
     --highlight_background: rgb(181, 245, 53);
     --hover-link-background: rgb(229, 255, 57);
+    --other_link_color: rgb(181, 245, 53);
 }
 
 html {
@@ -31,6 +32,15 @@ h1{
 
 body{
     padding:20px;
+}
+
+.twitterLink {
+    text-decoration: none;
+}
+
+.twitterLink:hover {
+    color: var(--other_link_color);
+    background-color: transparent;
 }
 
 .fungif {
@@ -71,6 +81,19 @@ strong{
 
 ul{
     list-style:none;padding:0
+}
+
+.smallerHeader {
+    font-weight: bold;
+}
+
+.paragraphLink {
+    text-decoration: none;
+}
+
+.paragraphLink:hover {
+    color: var(--other_link_color);
+    background-color: transparent;
 }
 
 /* 

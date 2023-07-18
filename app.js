@@ -42,8 +42,11 @@ document.documentElement.onmousemove=function(e){
 };
 
 window.addEventListener("touchmove", e => {
-    e.preventDefault();
-    e.stopImmediatePropagation();
+    currElementTag = document.elementFromPoint(e.changedTouches[0].clientX, e.changedTouches[0].clientY).tagName;
+    if (currElementTag !== "A") {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+    }
     mainBlock.style.webkitTransform=getRotateStr(e.changedTouches[0].clientX);
     gifBlock.style.webkitTransform=getRotateStr(e.changedTouches[0].clientX);
   }, { passive: false });

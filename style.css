@@ -117,9 +117,9 @@ on desktop.
     transform-style:preserve-3d;
 }
 
-#spinnyDiv:hover {
+/* #spinnyDiv:hover {
     border-color: var(--visited_link_color);
-}
+} */
 
 p,h2,ul{
     line-height:0.75;
@@ -129,14 +129,23 @@ p,h2,ul{
 .pWithLinks {line-height: 1.2;}
 
 /* The idea of these is to give you options for the 3d effect */
-.thirdDepth{
-    -webkit-transform:translateZ(200px);
-    transform:translateZ(200px);
+.backSecondDepth{
+    -webkit-transform:translateZ(125px);
+    transform:translateZ(125px);
+}
 
+.backThirdDepth{
+    -webkit-transform:translateZ(175px);
+    transform:translateZ(175px);
+}
+
+.backFourthDepth{
+    -webkit-transform:translateZ(225px);
+    transform:translateZ(225px);
 }
 
 /* The idea of these is to give you options for the 3d effect */
-.fourthDepth{
+.frontDepth{
     -webkit-transform:translateZ(-50px);
     transform:translateZ(-50px);
 }

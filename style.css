@@ -39,6 +39,11 @@ body{
     text-decoration: none;
 }
 
+.shallowDepth {
+    -webkit-transform:translateZ(50px);
+    transform:translateZ(50px);    
+}
+
 #contactGif {
     position: fixed;
     right: -33px;
@@ -94,7 +99,6 @@ ul{
 
 .smallerHeader {
     font-weight: bold;
-    /* color: orange; */
 }
 
 .paragraphLink {

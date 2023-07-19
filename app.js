@@ -9,7 +9,7 @@ let clientY;
 
 const SMALL_SIZE = 769;
 const defaultSpinniness = -22; // the closer to 0 the more spinny it is
-const smallSpinniness = -9; // the closer to 0 the more spinny it is
+const smallSpinniness = -13; // the closer to 0 the more spinny it is
 
 let gState = {
     currSpinniness: defaultSpinniness

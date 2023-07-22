@@ -11,15 +11,16 @@ const SMALL_SIZE = 769;
 const defaultSpinniness = -22; // the closer to 0 the more spinny it is
 const smallSpinniness = -13; // the closer to 0 the more spinny it is
 
+let g_state = {
+    isTouchScreen: false
+}
+
 let gState = {
     currSpinniness: defaultSpinniness
 };
 
-
 function getRotateStr(xPos) {
     return "rotate3d(60, 180, -6, "+ ( ( xPos ) / gState.currSpinniness) +"deg)" // regular
-    // return "rotate3d(30, -180, -6, "+ (xPos/-20) +"deg)"; // popping out at you
-    // return "rotate3d(30, 180, -6, "+ ( xPos-50 / -20) +"deg)" // insane spinning
 }
 
 function setSpinniness() {
@@ -34,11 +35,11 @@ onresize = () => {
     setSpinniness();
 };
 
-
-
 document.documentElement.onmousemove=function(e){
-    mainBlock.style.webkitTransform= mainBlock.style.transform=getRotateStr(e.pageX);
-    gifBlock.style.webkitTransform= mainBlock.style.transform=getRotateStr(e.pageX);
+    if (!g_state.isTouchScreen) {
+        mainBlock.style.webkitTransform= mainBlock.style.transform=getRotateStr(e.pageX);
+        gifBlock.style.webkitTransform= mainBlock.style.transform=getRotateStr(e.pageX);
+    }
 };
 
 window.addEventListener("touchmove", e => {
@@ -69,6 +70,7 @@ function setDepths() {
 
 function init() {
     // setDepths(); // uncomment this line (removing // at the start)
+    g_state.isTouchScreen = ("ontouchstart" in document.documentElement);
     setSpinniness();
 }
 

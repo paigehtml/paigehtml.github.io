@@ -1,6 +1,5 @@
 addEventListener("resize", (event) => {});
 
-
 var mainBlock=document.getElementById("spinnyDiv");
 var gifBlock=document.getElementById("contactGif");
 const src = document.getElementById("source");
@@ -9,22 +8,27 @@ let clientY;
 
 const SMALL_SIZE = 769;
 const defaultSpinniness = -22; // the closer to 0 the more spinny it is
-const smallSpinniness = -13; // the closer to 0 the more spinny it is
+const smallSpinniness = -10; // the closer to 0 the more spinny it is
 
-let g_state = {
-    isTouchScreen: false
-}
 
 let gState = {
-    currSpinniness: defaultSpinniness
+    isTouchScreen: false,
+    currSpinniness: defaultSpinniness,
+    width: window.innerWidth
 };
 
 function getRotateStr(xPos) {
-    return "rotate3d(60, 180, -6, "+ ( ( xPos ) / gState.currSpinniness) +"deg)" // regular
+    let zeroCentered = xPos - (gState.width / 2.0);
+    let isLeft = 1;
+    if (zeroCentered < 0) {
+        isLeft = -1;
+    }
+    return "rotate3d(" + 60 * isLeft +  ", 120, " + -6 +  ", "+ ( ( zeroCentered ) / gState.currSpinniness) +"deg)" // regular
+    // return "rotate3d(" + 60 * isLeft +  ", 120, " + -6 * isLeft +  ", "+ ( ( isLeft * zeroCentered ) / gState.currSpinniness) +"deg)" // also fun
 }
 
 function setSpinniness() {
-    if (window.innerWidth <= 769) {
+    if (gState.width <= 769) {
         gState.currSpinniness = smallSpinniness;
     } else {
         gState.currSpinniness = defaultSpinniness;
@@ -32,11 +36,12 @@ function setSpinniness() {
 }
 
 onresize = () => {
+    gState.width = window.innerWidth;
     setSpinniness();
 };
 
 document.documentElement.onmousemove=function(e){
-    if (!g_state.isTouchScreen) {
+    if (!gState.isTouchScreen) {
         mainBlock.style.webkitTransform= mainBlock.style.transform=getRotateStr(e.pageX);
         gifBlock.style.webkitTransform= mainBlock.style.transform=getRotateStr(e.pageX);
     }
@@ -70,7 +75,7 @@ function setDepths() {
 
 function init() {
     // setDepths(); // uncomment this line (removing // at the start)
-    g_state.isTouchScreen = ("ontouchstart" in document.documentElement);
+    gState.isTouchScreen = ("ontouchstart" in document.documentElement);
     setSpinniness();
 }
 

@@ -4,9 +4,9 @@
     --background_color: rgb(83, 83, 83);
     --background_color: rgb(255, 255, 255);
     --header_color: rgb(0, 0, 0);
-    --link_color: rgb(0, 100, 0);
+    --link_color: rgb(83, 83, 83);
     --link_background: rgb(0, 0, 0);
-    --visited_link_color: rgb(83, 83, 83);
+    --visited_link_color: rgb(0, 100, 0);
     --highlight_background: rgb(245, 152, 53);
     --hover-link-background: rgb(245, 152, 53);
     --other_link_color: rgb(255, 138, 226);

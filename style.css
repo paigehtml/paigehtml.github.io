@@ -38,10 +38,15 @@ body{
     text-decoration: none;
 }
 
+.shallowDepth {
+    -webkit-transform:translateZ(125px);
+    transform:translateZ(125px);    
+}
+
 #contactGif {
     position: fixed;
-    right: 5px;
-    bottom: 5px;
+    right: -33px;
+    bottom: 0px;
     -webkit-transform-style:preserve-3d;
     transform-style:preserve-3d;    
 }
@@ -124,17 +129,27 @@ p,h2,ul{
     -webkit-transform:translateZ(100px);
     transform:translateZ(100px);
 }
+
 .pWithLinks {line-height: 1.2;}
 
 /* The idea of these is to give you options for the 3d effect */
-.thirdDepth{
-    -webkit-transform:translateZ(200px);
-    transform:translateZ(200px);
+.backSecondDepth{
+    -webkit-transform:translateZ(125px);
+    transform:translateZ(125px);
+}
 
+.backThirdDepth{
+    -webkit-transform:translateZ(175px);
+    transform:translateZ(175px);
+}
+
+.backFourthDepth{
+    -webkit-transform:translateZ(225px);
+    transform:translateZ(225px);
 }
 
 /* The idea of these is to give you options for the 3d effect */
-.fourthDepth{
+.frontDepth{
     -webkit-transform:translateZ(-50px);
     transform:translateZ(-50px);
 }

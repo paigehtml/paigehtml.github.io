@@ -4,18 +4,22 @@
     --background_color: rgb(83, 83, 83);
     --background_color: rgb(255, 255, 255);
     --header_color: rgb(0, 0, 0);
-    --link_color: rgb(83, 83, 83);
+    --link_color: rgb(25, 93, 14);
     --link_background: rgb(0, 0, 0);
     --visited_link_color: rgb(0, 100, 0);
     --highlight_background: rgb(245, 152, 53);
-    --hover-link-background: rgb(245, 152, 53);
-    --other_link_color: rgb(255, 138, 226);
+    --hover_link_color: rgb(56, 199, 34);
+    --other_link_color: rgb(56, 199, 34);
 }
 
 html {
     background-color: var(--background_color);
     color: var(--regular_text);
+}
 
+
+#paigeProfileImg {
+    max-width: 90%;
 }
 
 ::selection { /* Colors for highlighting stuff */
@@ -35,6 +39,8 @@ body{
 }
 
 .twitterLink {
+    text-dection: none;
+    color: var(--regular_text);
     text-decoration: none;
 }
 
@@ -44,6 +50,7 @@ body{
     bottom: 5px;
     -webkit-transform-style:preserve-3d;
     transform-style:preserve-3d;    
+    z-index: -3;
 }
 
 .twitterLink:hover {
@@ -67,12 +74,23 @@ a {
     padding: 4px;
 }
 
-a:hover {
-    background-color: var(--hover-link-background);
+.contentLink:hover {
+    color: var(--hover_link_color);
 }
 
 a:visited { /* color of a link that's been clicked on*/
     color: var(--visited_link_color);
+}
+
+#homeLink {
+    width:100%;
+    display: flex;
+    justify-content: center;    
+}
+
+#homeLink:hover {
+    color: var(--other_link_color);
+    background-color: none;
 }
 
 li:hover {
@@ -96,7 +114,7 @@ ul{
 }
 
 .paragraphLink {
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 .paragraphLink:hover {
@@ -120,7 +138,7 @@ on desktop.
 }
 
 p,h2,ul{
-    line-height:0.75;
+    line-height:1.35;
     -webkit-transform:translateZ(100px);
     transform:translateZ(100px);
 }
@@ -135,8 +153,14 @@ p,h2,ul{
 
 /* The idea of these is to give you options for the 3d effect */
 .fourthDepth{
-    -webkit-transform:translateZ(-50px);
-    transform:translateZ(-50px);
+    -webkit-transform:translateZ(-100px);
+    transform:translateZ(-100px);
+}
+
+/* The idea of these is to give you options for the 3d effect */
+.fifthDepth{
+    -webkit-transform:translateZ(-30px);
+    transform:translateZ(-30px);
 }
 
 @media only screen and (min-width:770px) {
@@ -154,10 +178,14 @@ The settings for spinny div when you're
 on a mobile screen
  */
 #spinnyDiv {
-    width:550px;
+    width:374px;
     position:absolute;
     top:5em;
-    left:20%;
+    left:30%;
+}
+
+#paigeProfileImg {
+    max-width: 50%;
 }
 
 }

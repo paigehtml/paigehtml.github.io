@@ -50,7 +50,6 @@ body{
     bottom: 5px;
     -webkit-transform-style:preserve-3d;
     transform-style:preserve-3d;    
-    z-index: -3;
 }
 
 .twitterLink:hover {
@@ -131,6 +130,7 @@ on desktop.
     padding:0 15px;
     -webkit-transform-style:preserve-3d;
     transform-style:preserve-3d;
+    max-width:374px;
 }
 
 #spinnyDiv:hover {

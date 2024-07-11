@@ -153,8 +153,8 @@ p,h2,ul{
 
 /* The idea of these is to give you options for the 3d effect */
 .fourthDepth{
-    -webkit-transform:translateZ(-100px);
-    transform:translateZ(-100px);
+    /* -webkit-transform:translateZ(0px); */
+    /* transform:translateZ(0px); */
 }
 
 /* The idea of these is to give you options for the 3d effect */

@@ -52,6 +52,10 @@ body{
     transform-style:preserve-3d;    
 }
 
+#backToLandingLink {
+
+}
+
 .twitterLink:hover {
     color: var(--other_link_color);
     background-color: transparent;

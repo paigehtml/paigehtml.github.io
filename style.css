@@ -189,8 +189,13 @@ on a mobile screen
 }
 
 #paigeProfileImg {
-    max-width: 50%;
+    max-width: 80%;
 }
 
 }
 
+@media only screen and (min-width:900px) {
+    #paigeProfileImg {
+        max-width: 50%;
+    }    
+}

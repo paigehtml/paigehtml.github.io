@@ -54,13 +54,13 @@ window.addEventListener("touchmove", e => {
     gifBlock.style.webkitTransform=getRotateStr(e.changedTouches[0].clientX);
   }, { passive: false });
 
-document.documentElement.ondragstart=function(e){
-    console.log("ondragstart move");
-};
+// document.documentElement.ondragstart=function(e){
+    // console.log("ondragstart move");
+// };
 
-document.documentElement.ondrag=function(e){
-    console.log("ondrag move");
-};
+// document.documentElement.ondrag=function(e){
+    // console.log("ondrag move");
+// };
 
 function setDepths() {
     let i = 5;

@@ -4,13 +4,19 @@
     --background_color: rgb(83, 83, 83);
     --background_color: rgb(255, 255, 255);
     --header_color: rgb(0, 0, 0);
-    --link_color: rgb(25, 93, 14);
+    --link_color: rgb(56, 199, 34);
     --link_background: rgb(0, 0, 0);
     --visited_link_color: rgb(0, 100, 0);
     --visited_link_color_twitter_link: #929292;
     --highlight_background: rgb(245, 152, 53);
     --hover_link_color: rgb(56, 199, 34);
     --other_link_color: rgb(56, 199, 34);
+
+    --rotating_color_0: #e111d0;
+    --rotating_color_1: #d0e111;
+    --rotating_color_2: #e11168;
+    --rotating_color_3: #e12211;
+    --rotating_color_4: #e18a11;
 }
 
 html {
@@ -39,7 +45,7 @@ body{
     padding:20px;
 }
 
-.twitterLink {
+.allPageLink {
     text-decoration: none;
     color: var(--regular_text);
     text-decoration: none;
@@ -48,9 +54,26 @@ body{
     padding: 0;    
 }
 
-.twitterLink:visited {
-    color: var(--visited_link_color_twitter_link);
+.randVisited0:visited {
+    color: var(--rotating_color_0);
 }
+
+.randVisited1:visited {
+    color: var(--rotating_color_1);
+}
+
+.randVisited2:visited {
+    color: var(--rotating_color_2);
+}
+
+.randVisited3:visited {
+    color: var(--rotating_color_3);
+}
+
+.randVisited4:visited {
+    color: var(--rotating_color_4);
+}
+
 
 #contactGif {
     position: fixed;
@@ -64,7 +87,7 @@ body{
 
 }
 
-.twitterLink:hover {
+.allPageLink:hover {
     color: var(--other_link_color);
     background-color: transparent;
 }
@@ -90,7 +113,8 @@ a {
 }
 
 a:visited { /* color of a link that's been clicked on*/
-    color: var(--visited_link_color);
+    /* color: var(--rotating_color_1); */
+    color: blue;
 }
 
 #homeLink {

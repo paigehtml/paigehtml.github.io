@@ -1,5 +1,13 @@
 addEventListener("resize", (event) => {});
 
+const c_COLOR_PAIRS = [
+    {"color": "#e111d0", "hoverColor": "#38c722"},
+    {"color": "#e11168", "hoverColor": "#38c722"},
+    {"color": "#e12211", "hoverColor": "#38c722"},
+    {"color": "#e18a11", "hoverColor": "#38c722"},
+    {"color": "#d0e111", "hoverColor": "#38c722"},
+];
+
 var mainBlock=document.getElementById("spinnyDiv");
 var gifBlock=document.getElementById("contactGif");
 const src = document.getElementById("source");
@@ -54,13 +62,6 @@ window.addEventListener("touchmove", e => {
     gifBlock.style.webkitTransform=getRotateStr(e.changedTouches[0].clientX);
   }, { passive: false });
 
-// document.documentElement.ondragstart=function(e){
-    // console.log("ondragstart move");
-// };
-
-// document.documentElement.ondrag=function(e){
-    // console.log("ondrag move");
-// };
 
 function setDepths() {
     let i = 5;
@@ -72,11 +73,31 @@ function setDepths() {
 }
 
 
+function setColors() {
+    $(".paragraphLink").each(function(index, element) {
+        console.log(index);
+        color_index = index % c_COLOR_PAIRS.length
+        const colorPair = c_COLOR_PAIRS[color_index];
+        $(this)
+        .css("color", colorPair.color) // Set the default color
+        .hover(
+          function () {
+            // Mouse enter
+            $(this).css("color", colorPair.hoverColor);
+          },
+          function () {
+            // Mouse leave
+            $(this).css("color", colorPair.color);
+          }
+        );        
+      });  
+}
 
 function init() {
     // setDepths(); // uncomment this line (removing // at the start)
     gState.isTouchScreen = ("ontouchstart" in document.documentElement);
     setSpinniness();
+    setColors();
 }
 
 init();

@@ -147,6 +147,10 @@ ul{
     color: var(--rotating_color_0);
 }
 
+.homeBtn:hover {
+    color: var(--hover_link_color)
+}
+
 .paragraphLink:hover {
     color: var(--other_link_color);
     background-color: transparent;

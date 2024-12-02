@@ -112,11 +112,6 @@ a {
     color: var(--hover_link_color);
 }
 
-a:visited { /* color of a link that's been clicked on*/
-    /* color: var(--rotating_color_1); */
-    color: blue;
-}
-
 #homeLink {
     width:100%;
     display: flex;
@@ -148,8 +143,8 @@ ul{
     font-weight: bold;
 }
 
-.paragraphLink {
-    /* text-decoration: none; */
+.homeBtn {
+    color: var(--rotating_color_0);
 }
 
 .paragraphLink:hover {
